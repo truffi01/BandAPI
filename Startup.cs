@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using BandAPI.DBContext;
 using BandAPI.Services;
 using Microsoft.AspNetCore.Builder;
@@ -28,6 +29,7 @@ namespace BandAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies()); 
             services.AddScoped<IBandAlbumRepository, BandAlbumRepository>();
             services.AddDbContext<BandAlbumContext>(options =>
             {

@@ -28,7 +28,7 @@ namespace BandAPI.DBContext
                 Founded = new DateTime(1980, 1, 1),
                 MainGenre = "Heavy Metal"
             },
-            new Band
+            new Band()
             {
                 Id = Guid.Parse("01060680-4444-4500-0581-010300377669"),
                 Name = "Ross",
